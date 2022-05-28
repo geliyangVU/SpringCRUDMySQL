@@ -30,7 +30,7 @@ public class ProductController {
         return productService.getProducts();
     }
 
-    @GetMapping("Product/{id}")
+    @GetMapping("ProductBtId/{id}")
     public Optional<Product> findProductById(@PathVariable int id){
         return productService.getProductById(id);
     }
@@ -49,6 +49,7 @@ public class ProductController {
 
     @DeleteMapping("/delete/{id}")
     public String deleteProduct(@PathVariable int id){
+
         return productService.deleteProduct(id);
     }
 
